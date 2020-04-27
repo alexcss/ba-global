@@ -1,0 +1,67 @@
+
+/* Typography */
+h1,h2,h3,h4,h5,h6{
+	font-weight: 700;
+	margin: 0 0 20px;
+}
+h1{
+	font-size: 40px;
+	letter-spacing: 0.025em;
+	line-height: 0.87;
+
+	@media screen and (min-width:640px){
+		font-size: 60px;
+	}
+	@media screen and (min-width:1024px){
+		font-size: 82px;		
+		font-weight: 900;
+		
+	}
+}
+h2{
+	
+}
+
+h3{
+
+}
+
+a{
+	color: #fff;
+	text-decoration: none;
+	&:hover{
+		color: $primary-color;
+	}
+}
+
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	&:hover{
+
+	}
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	&:focus{
+		
+	}
+}
+
+textarea {
+
+}

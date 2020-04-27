@@ -1,0 +1,36 @@
+.ba-section{
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+
+	&__inner{
+		width: 100%;
+	}
+	&__title{
+		max-width: 470px;
+		margin-bottom: 45px;
+	}
+}
+
+.ba-tab-content{ 
+	position: relative;
+	padding: 60px 0 100px;
+	&:after{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		right: -30px;
+		width: 50%;
+		height: 100%;
+		z-index: -1;
+		background: url(../img/spaceman.jpg) right bottom no-repeat;
+		background-size: contain;
+	}
+}
+.ba-tabs{
+	border-top: 1px solid #1c1c1c;
+}
+.ba-tab{
+	display: block;
+	padding-top: 28px;
+}

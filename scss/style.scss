@@ -1,0 +1,27 @@
+$base-font-family: 'ProximaNova', sans-serif;
+$primary-color: #0f33ff;
+
+@import "fonts";
+@import "normalize";
+@import "layout";
+@import "elements";
+
+@import "_header";
+@import "_page-home.scss";
+
+
+body{
+	color: #fff;
+	background: #0c0c0c;
+	font: 400 16px/1.5 $base-font-family;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1200px;
+}
+.ba-hidden{
+	display: none;
+}
