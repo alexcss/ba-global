@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Global - webdesign studio</title>
+	<title>Hire us | Global</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,6 +18,8 @@
 				<a href="index.html" class="ba-logo">
 					<img src="img/logo.svg" alt="Global">
 				</a>
+
+				<a href="hire-us.html" class="ba-button ba-button--small">Hire us</a>
 
 				<button class="ba-menu-toggle" aria-label="Show menu">
 					<svg 	width="19px" height="14px">
@@ -36,7 +38,7 @@
  
 			<nav class="ba-dots-nav">
 				<ul class="ba-dots-menu">
-					<li class="active">
+					<li>
 						<a href="index.html">
 							HOME
 						</a>
@@ -68,7 +70,7 @@
 					<li></li>
 					<li></li>
 					<li></li>
-					<li>
+					<li class="active">
 						<a href="hire-us.html">
 							Hire us
 						</a>
@@ -79,50 +81,76 @@
 
 
 			<div class="ba-row">
-				<div class="ba-col-small-12 ba-col-medium-10 ba-col-large-9 ba-offset-large-2 ba-offset-medium-2">
+				<div class="ba-col-small-12 ba-col-medium-10 ba-col-large-8 ba-offset-large-2 ba-offset-medium-2">
 
 					<section class="ba-section">
 						<div class="ba-section__inner">
 							
-							<div class="ba-tab-content">
-								<h1 class="ba-section__title">Your next interactive experience</h1>
-								<a href="hire-us.html" class="ba-button-icon">
-									<span>
-										Hire us 
-		
-										<svg width="18" height="14">
-											<use xlink:href="#icon-arrow"></use>
-										</svg>
-									</span>
-								</a>
-							</div>
-							<!-- /.ba-tab-content -->
+							<h1 class="ba-section__title ba-section__title--small">You want us to do</h1>
 							
-							<div class="ba-tabs ba-row">
-								<div class="ba-col-small-12 ba-col-medium-4">
-									<a href="#" class="ba-tab ba-tab--active">
-										<h4 class="ba-tab__title">Metiew & Smith</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-									</a>
+							<form action="#">
+								<div class="ba-form-row">
+									<label class="ba-check">
+										<input type="checkbox" name="services[]" value="App Design">
+										<span>
+											App Design
+										</span>
+									</label>
+									<label class="ba-check">
+										<input type="checkbox" name="services[]" value="Graphic Design">
+										<span>
+											Graphic Design
+										</span>
+									</label>
+									<label class="ba-check">
+										<input type="checkbox" name="services[]" value="Motion Design">
+										<span>
+											Motion Design
+										</span>
+									</label>
+									<label class="ba-check">
+										<input type="checkbox" name="services[]" value="UX Design">
+										<span>
+											UX Design
+										</span>
+									</label>
+									<label class="ba-check">
+										<input type="checkbox" name="services[]" value="Webdesign">
+										<span>
+											Webdesign
+										</span>
+									</label>
+									<label class="ba-check">
+										<input type="checkbox" name="services[]" value="Marketing">
+										<span>
+											Marketing
+										</span>
+									</label>
 								</div>
-								<!-- /.ba-col-small-12 ba-col-medium-4 -->
-								<div class="ba-col-small-12 ba-col-medium-4">
-									<a href="#" class="ba-tab">
-										<h4 class="ba-tab__title">Metiew & Smith</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-									</a>
+								<!-- /.ba-services-row -->
+								<div class="ba-inputs-row">
+									<div class="ba-inputs-col ba-float-label">
+										<input id="input-name" type="text" required placeholder="Name" name="name">
+										<label for="input-name">
+											Name
+										</label>
+									</div>
+									<!-- /.ba-inputs-col -->
+									<div class="ba-inputs-col ba-float-label">
+										<input id="input-email" type="email" required placeholder="Email" name="email">
+										<label for="input-email">
+											Email
+										</label>
+									</div>
+									<!-- /.ba-inputs-col -->
 								</div>
-								<!-- /.ba-col-small-12 ba-col-medium-4 -->
-								<div class="ba-col-small-12 ba-col-medium-4">
-									<a href="#" class="ba-tab">
-										<h4 class="ba-tab__title">Metiew & Smith</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-									</a>
+								<!-- /.ba-inputs-row -->
+								<div class="ba-text-center">
+									<button type="submit" class="ba-button">Send Request</button>
 								</div>
-								<!-- /.ba-col-small-12 ba-col-medium-4 -->
-							</div>
-							<!-- /.ba-tabs -->
-							
+								<!-- /.ba-text-center -->
+							</form>
+
 						</div>
 						<!-- /.ba-section__inner -->
 					</section>
