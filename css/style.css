@@ -1003,4 +1003,98 @@ main {
     .ba-dots-menu li.active a:before {
       transform: translateX(0); }
 
+.ba-offcanvas-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0; }
+
+.ba-offcanvas-header {
+  padding: 20px 0 0; }
+
+.ba-wrap {
+  height: 100vh;
+  overflow: hidden;
+  perspective: 1800px;
+  pointer-events: none; }
+
+.ba-main-content {
+  height: 100%;
+  overflow-y: auto;
+  background: #0c0c0c;
+  transition: transform 0.6s , background 0.3s;
+  transition-timing-function: cubic-bezier(0.33, -0.72, 0.85, 0.42);
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+  transform-origin: 0 50%;
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.75), 0 0 0 40px #0f33ff; }
+  .ba-main-content.shifted {
+    transform: translate3d(-50%, 0, -300px) rotateY(30deg) scale(0.8);
+    pointer-events: none;
+    transition-timing-function: cubic-bezier(0.18, 0.09, 0.53, 1.54); }
+    @media screen and (min-width: 1024px) {
+      .ba-main-content.shifted {
+        transform: translate3d(-10%, 0, -300px) rotateY(30deg) scale(0.8); } }
+    @media screen and (min-width: 1200px) {
+      .ba-main-content.shifted {
+        transform: translate3d(0px, 0, -300px) rotateY(30deg) scale(0.9); } }
+  .ba-main-content::-webkit-scrollbar {
+    width: 4px;
+    background: transparent; }
+  .ba-main-content::-webkit-scrollbar-track {
+    background: transparent; }
+  .ba-main-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    transition: background 0.3s; }
+  .ba-main-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4); }
+
+.ba-offcanvas-nav {
+  position: absolute;
+  right: 10%;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: -1; }
+
+.ba-offcanvas-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: right; }
+  .ba-offcanvas-menu .active a {
+    color: #fff; }
+    .ba-offcanvas-menu .active a:after {
+      transform: scaleX(1); }
+  .ba-offcanvas-menu li + li {
+    margin-top: 20px; }
+  .ba-offcanvas-menu a {
+    font: 900 30px/1 "ProximaNova", sans-serif;
+    letter-spacing: 0.025em;
+    display: inline-block;
+    position: relative; }
+    @media screen and (min-width: 640px) {
+      .ba-offcanvas-menu a {
+        font-size: 55px; } }
+    .ba-offcanvas-menu a:after {
+      content: '';
+      position: absolute;
+      height: 30%;
+      top: 40%;
+      left: -12px;
+      right: -12px;
+      background: #0f33ff;
+      transition: transform 0.3s;
+      transform-origin: 100% 0;
+      transform: scaleX(0); }
+    .ba-offcanvas-menu a:hover {
+      color: #fff; }
+      .ba-offcanvas-menu a:hover:after {
+        transform: scaleX(1); }
+
 /*# sourceMappingURL=style.css.map */
