@@ -16,7 +16,7 @@
 })();
 
 // Initialize and add the map
-function initMap() {
+window.initMap = () => {
 	let mapDiv = document.querySelector('.ba-map');
 	
 	if(!mapDiv) return;
@@ -280,3 +280,4 @@ function initMap() {
 		}
 	);
 }
+
