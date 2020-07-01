@@ -7,13 +7,24 @@ const browserSync = require('browser-sync').create();
 const htmlmin = require('gulp-html-minifier-terser');
 const webpack = require('webpack-stream');
 
+const gulpif = require('gulp-if');
+const argv = require('yargs').argv;
+const del = require('del');
+
 sass.compiler = require('node-sass');
+
+// Check for --production flag
+let isDev = !(argv.production);
 
 function buildStyles() {
 	return gulp.src('./src/scss/style.scss')
-		.pipe(sourcemaps.init())
-		.pipe(sass().on('error', sass.logError))
-		.pipe(sourcemaps.write('./'))
+		.pipe( 
+			gulpif(isDev, sourcemaps.init() )			
+		)
+		.pipe(sass({outputStyle: isDev ? 'nested' : 'compressed'}).on('error', sass.logError))
+		.pipe( 
+			gulpif(isDev, sourcemaps.write('./') )			
+		)		
 		.pipe(gulp.dest('./build/css'))
 		.pipe(browserSync.stream())
 }
@@ -22,14 +33,16 @@ gulp.task('styles', buildStyles);
 
 function buildHtml() {
 	return gulp.src('./src/**/*.html')
-		.pipe(htmlmin({ collapseWhitespace: true }))
+		.pipe(
+			gulpif(!isDev, htmlmin({ collapseWhitespace: true }) )
+		)
 		.pipe(gulp.dest('./build/'))
 		.pipe(browserSync.stream())
 }
 
 gulp.task('html', buildHtml);
 
-let isDev = false;
+
 
 let webPackConfig = {
 	output: {
@@ -95,6 +108,17 @@ function watch() {
 }
 
 gulp.task('watch', watch);
+
+function clean() {
+	return del(['build/*']);
+}
+
+let build = gulp.series(
+	clean,
+	gulp.parallel(buildHtml, buildStyles, buildImg, buildScripts)
+)
+
+gulp.task('build', build);
 
 gulp.task(
 	'default',
